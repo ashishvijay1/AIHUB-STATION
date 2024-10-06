@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Policy Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .graph-container {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .input-container input {
+            padding: 10px;
+            width: 40%;
+            font-size: 1rem;
+        }
+        .result-box {
+            font-size: 1.2rem;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Become Our Prime Partner </h1>
+        <p>Create your Fix Deposite</p>
+        <P>Contact:aashish180498@gmail.com|+919950045042</P>
+
+        <div class="graph-container">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="input-container">
+            <label for="amount">Enter Amount (Max: 10,00000):</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+        </div>
+
+        <div class="result-box">
+            <p id="profit-display">See Your Annual Profit : $0.00</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initialize chart
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Amount', 'Profit'],
+                datasets: [{
+                    label: 'Financial Graph',
+                    data: [0, 0],
+                    backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
+                    borderColor: ['rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100000000000
+                    }
+                }
+            }
+        });
+
+        // Function to update the chart and profit calculation
+        const amountInput = document.getElementById('amount');
+        const profitDisplay = document.getElementById('profit-display');
+
+        amountInput.addEventListener('input', function () {
+            const amount = parseFloat(amountInput.value) || 0;
+            const profit = amount * 0.125;
+
+            // Update chart data
+            chart.data.datasets[0].data[0] = amount;
+            chart.data.datasets[0].data[1] = profit;
+            chart.update();
+
+            // Update profit display
+            profitDisplay.innerHTML = `Annual Profit: $${profit.toFixed(2)}`;
+        });
+    </script>
+
+</body>
+</html>

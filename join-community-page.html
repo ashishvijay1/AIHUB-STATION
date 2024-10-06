@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our AI Hub Community</title>
+    <link rel="stylesheet" href="CSS/Join-community-page.css">
+    <script defer src="script-join-community.js"></script>
+</head>
+<body>
+
+    <!-- Join Our Community Form -->
+    <section class="join-community-section">
+        <h1>Join Our AI Hub Community</h1>
+        <p>Be a part of the AI revolution! Join our community to stay updated with the latest in AI technology and resources.</p>
+
+        <form id="join-form">
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <!-- Profession (Dropdown) -->
+            <label for="profession">Profession:</label>
+            <select id="profession" name="profession" required>
+                <option value="">--Select Profession--</option>
+                <option value="student">Student</option>
+                <option value="student1">Shopkeeper</option>
+                <option value="developer">Developer</option>
+                <option value="engineer">Engineer</option>
+                <option value="student">Student</option>
+                <option value="student2">Driver</option>
+                <option value="student3">Manager</option>
+                
+
+                <option value="entrepreneur">Entrepreneur</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <!-- Email (with automatic domain) -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@" oninput="autoCompleteEmail()" required><br><br>
+
+            <!-- Join Now and Request Callback Buttons -->
+            <button type="submit" id="join-now-btn">Join Now</button>
+            <button type="button" id="request-call-back-btn">Request Call Back</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="success-message" style="display: none;">
+            <p>Thank you for joining our AI Hub Community!</p>
+            <p>We've sent you a confirmation email with further details.</p>
+        </div>
+
+    </section>
+
+</body>
+</html>

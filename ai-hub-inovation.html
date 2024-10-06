@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Training Session</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background: #555;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        button {
+            background: #008CBA;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005f6b;
+        }
+        #form-container {
+            display: none;
+            background: #e2e2e2;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to AI-Powered Training Sessions</h1>
+    </header>
+    <nav>
+        <p>Experience the Future of Learning in Physical Classrooms</p>
+    </nav>
+    <div class="container">
+        <section id="intro">
+            <h2> Get Most Advance Learning Experience AIHUB-STATION in India</h2>
+            <p>Dive into the next generation of AI development with our comprehensive training sessions.</p>
+        </section>
+        <section id="features">
+            <h2>what you will Learn </h2>
+            <ul>
+                <li>AI fundamentals</li>
+                <li>Interactive Learning</li>
+                <li> Flexible Membership Plan</li>
+                <li>Building ML modal without Coding</li>
+                <li>Conduct comprehensive market analysis using AI tools</li>
+                <li>Generate creative and actionable ideas using Our AIHUB</li>
+                <li>Learn Word,PowerPoint,Excel,Teams,Outlook,Microsoft Copilot for M365</li>
+                <li>Edit audio and Video content seamlessly with description With AI</li>
+                <li>Manage Social media efficiently with simplified toolkits</li>
+                <li>Write Professional email effortlessly with Compose AI</li>
+                <li>Key Concept-LLM,Embeddings, Prompt Engneering,fine Tuning </li>
+                <li>Learn How Pre-Process data</li>
+                <li><i class="fa-solid fa-bars"></i>unfold the power of Deep Neural Network</li>
+                <i class="fa-solid fa-bars"></i>
+                
+
+                
+                
+            </ul>
+            <button type="button" onclick="payNow()">Buy Now ₹7899 </button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function showForm() {
+            document.getElementById('form-container').style.display = 'block';
+        }
+
+        function payNow() {
+            var options = {
+                "key": "YOUR_RAZORPAY_KEY_ID",
+                "amount": "50000", // Example amount in paise (50000 paise = INR 500)
+                "currency": "INR",
+                "name": "AI Training Session",
+                "description": "AI Training Registration Fee",
+                "image": "https://your-logo-url.com", // Optional: Add your logo URL
+                "handler": function (response){
+                    alert("Payment successful. Payment ID: " + response.razorpay_payment_id);
+                    // You can add further actions here, like form submission
+                },
+                "prefill": {
+                    "name": document.getElementById('name').value,
+                    "email": document.getElementById('email').value,
+                    "contact": document.getElementById('phone').value
+                },
+                "theme": {
+                    "color": "#008CBA"
+                }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        }
+    </script>
+</body>
+</html>
