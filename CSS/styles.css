@@ -51,13 +51,13 @@ button:hover {
     background-color: #0056b3;
 }
 
-#services-list {
+.services-list {
     list-style-type: none;
     padding: 0;
 }
 
-#services-list li {
-    margin: 10px 0;
+.services-list li {
+    margin: 8px 0;
 }
 
 /* Join Us Section */
@@ -75,14 +75,14 @@ input[type="text"], input[type="email"], input[type="tel"] {
     background-color: #ffffff;
 }
 
-#community-list {
+.community-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 5px;
 }
 
-#community-list .community-member {
+.community-list .community-member {
     padding: 10px;
     background-color: #e0e0e0;
     border-radius: 5px;
@@ -125,7 +125,7 @@ footer {
     margin-bottom: 20px;
 }
 
-#partner-btn {
+.partner-btn {
     padding: 12px 24px;
     background-color: #3b6946;
     color: white;
@@ -135,7 +135,7 @@ footer {
     transition: background-color 0.3s;
 }
 
-#partner-btn:hover {
+.partner-btn:hover {
     background-color: #218838;
 }
 
@@ -293,8 +293,8 @@ footer {
 
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 columns */
-        grid-template-rows: repeat(5, auto); /* 5 rows */
+        grid-template-columns: repeat(2, 1fr); /* 4 columns */
+        grid-template-rows: repeat(10, auto); /* 5 rows */
         gap: 20px;
         width: 100%;
         max-width: 1200px;
