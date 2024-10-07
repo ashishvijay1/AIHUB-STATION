@@ -16,7 +16,7 @@
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
-            border: 1px solid #ddd;
+            border: 2px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -73,7 +73,7 @@
         const chart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Amount', 'Profit'],
+                labels: ['Invest Amount', 'Get Profit'],
                 datasets: [{
                     label: 'Financial Graph',
                     data: [0, 0],
@@ -86,7 +86,7 @@
                 scales: {
                     y: {
                         beginAtZero: true,
-                        max: 100000000000
+                        max: 100000
                     }
                 }
             }
